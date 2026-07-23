@@ -16,7 +16,7 @@
 
 ---
 
-# 📖 Overview - Description
+# Overview - Description
 
 ## **Spelling Bee** is an application that mimic a real-life spelling bee.
 
@@ -31,7 +31,7 @@ It helps users build their vocabulary through:
 
 ---
 
-# ❓ Problems
+# Problems
 
 Common challenges:
 
@@ -43,13 +43,13 @@ Common challenges:
 
 ---
 
-# 🖥️ Application Overview
+# Application Overview
 
 The home page acts as the central hub for:
 
 - 🎮 Start Game
 - 📊 Current word count
-- 📝 Test
+- 📝 Test Mode
 
 ### 🏠 Home Page Layout
 
@@ -69,7 +69,7 @@ The home page acts as the central hub for:
 
 ---
 
-## 🎮 Start Game
+## Start Game
 
 The main spelling game includes:
 
@@ -79,13 +79,13 @@ The main spelling game includes:
 
 ---
 
-## 📈 Current Word Count
+## Current Word Count
 
 Tracks the number of words users have successfully mastered.
 
 ---
 
-## 📝 Test Mode
+## Test Mode
 
 Tests users on words they have already learned.
 
@@ -98,7 +98,7 @@ Features include:
 
 ---
 
-# 🚧 Current Development Status
+# Current Development Status
 
 This project is currently in the **planning and development phase**.
 
@@ -106,7 +106,7 @@ The README describes the intended functionality and may change as new features a
 
 ---
 
-# 🚀 Future Improvements
+# Future Improvements
 
 - 🎯 Adjust difficulty as word count increases
 - 🔍 Add sorting and search functionality
