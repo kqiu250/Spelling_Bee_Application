@@ -18,7 +18,7 @@
 
 # 📖 Overview
 
-**Spelling Bee** is an application that simulates a real-life spelling bee.
+## **Spelling Bee** is an application that mimic a real-life spelling bee.
 
 It helps users build their vocabulary through:
 
@@ -47,11 +47,9 @@ Common challenges:
 
 The home page acts as the central hub for:
 
-- 🎮 Starting a game
-- ⚙️ Accessing settings
-- 📚 Viewing vocabulary
-- 📊 Checking progress
-- 📝 Taking a test
+- 🎮 Start Game
+- 📊 Current word count
+- 📝 Test
 
 ### 🏠 Home Page Layout
 
@@ -65,7 +63,7 @@ The home page acts as the central hub for:
 |                                                  |
 |  Vocabulary                                      |
 +-------------------------------+------------------+
-|  Current word count            |       Test       |
+|  Current word count           |       Test       |
 +-------------------------------+------------------+
 ```
 
@@ -99,12 +97,6 @@ Features include:
 - 📖 Definition provided for each word
 - 💡 Hint button that reveals one letter
 - 🔇 No audio pronunciation, creating a more challenging practice mode
-
----
-
-## 📚 Vocabulary
-
-Provides access to words users are currently learning.
 
 ---
 
