@@ -16,7 +16,7 @@
 
 ---
 
-# 📖 Overview
+# 📖 Description Overview
 
 ## **Spelling Bee** is an application that mimic a real-life spelling bee.
 
@@ -31,7 +31,7 @@ It helps users build their vocabulary through:
 
 ---
 
-# ❓ The Problem
+# ❓ Problems
 
 Common challenges:
 
@@ -39,7 +39,7 @@ Common challenges:
 - 📝 Difficulty describing ideas accurately
 - 📖 Difficulty understanding word meanings
 
-**Spelling Bee** helps users learn new words and strengthen their vocabulary through interactive practice.
+## **Spelling Bee** helps users learn new words and strengthen their vocabulary through interactive practice.
 
 ---
 
@@ -68,8 +68,6 @@ The home page acts as the central hub for:
 ```
 
 ---
-
-# ✨ Features
 
 ## 🎮 Start Game
 
