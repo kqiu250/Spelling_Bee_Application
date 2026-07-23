@@ -1,24 +1,60 @@
-# Spelling Bee
+# 🐝 Spelling Bee
 
-This application simulates a real-life spelling bee. It helps users build their vocabulary through definitions, audio pronunciations, hints, and practice tests.
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=F7C948&height=200&section=header&text=Spelling%20Bee&fontSize=70&fontColor=ffffff&animation=fadeIn" />
+</p>
+
+<p align="center">
+  <b>A vocabulary-building application that simulates a real-life spelling bee experience.</b>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Purpose-Learning%20Project-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Category-Education-green?style=for-the-badge"/>
+</p>
+
+---
+
+# 📖 Overview
+
+**Spelling Bee** is an application that simulates a real-life spelling bee.
+
+It helps users build their vocabulary through:
+
+- 📚 Definitions
+- 🔊 Audio pronunciations
+- 💡 Helpful hints
+- 📝 Practice tests
 
 > This application is built for learning purposes.
 
-## The Problem
+---
 
-Have you ever:
+# ❓ The Problem
 
-- Struggled to spell a word?
-- Struggled to describe something accurately?
-- Struggled to understand the meaning of a word?
+Common challenges:
 
-Spelling Bee helps you learn new words and strengthen your vocabulary.
+- 🔤 Difficulty spelling unfamiliar words
+- 📝 Difficulty describing ideas accurately
+- 📖 Difficulty understanding word meanings
 
-## Application Overview
+**Spelling Bee** helps users learn new words and strengthen their vocabulary through interactive practice.
 
-The home page is the central hub for starting a game, accessing settings, viewing vocabulary, checking progress, and taking a test.
+---
 
-```text
+# 🖥️ Application Overview
+
+The home page acts as the central hub for:
+
+- 🎮 Starting a game
+- ⚙️ Accessing settings
+- 📚 Viewing vocabulary
+- 📊 Checking progress
+- 📝 Taking a test
+
+### Home Page Layout
+
 +--------------------------------------------------+
 |  HOME                              Settings      |
 |                                                  |
@@ -28,43 +64,73 @@ The home page is the central hub for starting a game, accessing settings, viewin
 |                                                  |
 |  Vocabulary                                      |
 +-------------------------------+------------------+
-|  Current word count           |       Test       |
+|  Current word count            |       Test      |
 +-------------------------------+------------------+
-```
 
-## Features
+---
 
-### Start Game
+# ✨ Features
+
+## 🎮 Start Game
 
 The main spelling game includes:
 
-- Audio pronunciation for each word
-- A definition to help you understand the word
-- A hint button that reveals one letter
+- 🔊 Audio pronunciation for each word
+- 📖 Word definitions to improve understanding
+- 💡 Hint button that reveals one letter
 
-### Current Word Count
+---
 
-Displays the number of words you have successfully mastered.
+## 📈 Current Word Count
 
-### Test Mode
+Tracks the number of words users have successfully mastered.
 
-Tests you on words you have already learned. Test Mode includes:
+---
 
-- Unlocks after you master 10 words
-- A definition for each word
-- A hint button that reveals one letter
-- No audio pronunciation, making it a more challenging practice mode
+## 📝 Test Mode
 
-### Vocabulary
+Tests users on words they have already learned.
 
-Provides access to the words you are currently learning.
+Features include:
 
-## Current State
+- 🔓 Unlocks after mastering 10 words
+- 📖 Definition provided for each word
+- 💡 Hint button that reveals one letter
+- 🔇 No audio pronunciation, creating a more challenging practice mode
 
-This project is currently in the planning and development phase. The README describes the intended functionality and may change as development progresses.
+---
 
-## Future Improvements
+## 📚 Vocabulary
 
-- Adjust difficulty as the word count increases
-- Add sorting and search functionality
-- Setting Functions
+Provides access to words users are currently learning.
+
+---
+
+# 🚧 Current Development Status
+
+This project is currently in the **planning and development phase**.
+
+The README describes the intended functionality and may change as new features are added.
+
+---
+
+# 🚀 Future Improvements
+
+- 🎯 Adjust difficulty as word count increases
+- 🔍 Add sorting and search functionality
+- ⚙️ Expand settings functionality
+
+---
+
+# 🛠️ Built With
+
+(Add your technologies here)
+
+Example:
+
+<p>
+<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</p>
+
+---
