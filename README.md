@@ -53,8 +53,9 @@ The home page acts as the central hub for:
 - 📊 Checking progress
 - 📝 Taking a test
 
-### Home Page Layout
+### 🏠 Home Page Layout
 
+```text
 +--------------------------------------------------+
 |  HOME                              Settings      |
 |                                                  |
@@ -64,8 +65,9 @@ The home page acts as the central hub for:
 |                                                  |
 |  Vocabulary                                      |
 +-------------------------------+------------------+
-|  Current word count            |       Test      |
+|  Current word count            |       Test       |
 +-------------------------------+------------------+
+```
 
 ---
 
@@ -124,13 +126,12 @@ The README describes the intended functionality and may change as new features a
 
 # 🛠️ Built With
 
-(Add your technologies here)
+<p align="center">
 
-Example:
-
-<p>
 <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+
 <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+
 </p>
 
 ---
