@@ -11,6 +11,7 @@ Have you ever:
 - Struggled to spell a word?
 - Struggled to describe something accurately?
 - Struggled to understand the meaning of a word?
+- Struggled to prompt LLM accurately?
 
 Spelling Bee helps you learn new words and strengthen your vocabulary.
 
