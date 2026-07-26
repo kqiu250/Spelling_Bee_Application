@@ -3,6 +3,7 @@
 
 import java.util.Scanner;
 
+
 public class HOME_PAGE {
     public static void main(String[] args) {
 
@@ -61,15 +62,24 @@ public class HOME_PAGE {
             clearConsole();
             switch (choice) {
                 case 1:
-                    waitIntro("Starting the game...");
-                    spellingBeeGame();
+
+                    waitIntro("Starting the game...", 32, 6, 825);
+                    do{
+                        clearConsole();
+                        SpellingBeeGame.startGame(scanner);
+                        clearConsole();
+                    }while(ifContinue(scanner));
+
+                    clearConsole();
+                    waitIntro("Exiting the game. Goodbye!", 32, 6, 825);
+                    clearConsole();
 
                     break;
                 case 2:
-                    waitIntro("Entering test mode...");
+                    waitIntro("Entering test mode...", 32, 6, 825);
                     break;
                 case 3:
-                    waitIntro("Exiting the game. Goodbye!");
+                    waitIntro("Exiting the game. Goodbye!", 32, 6, 825);
                     scanner.close();
                     System.exit(0);
                     break;
@@ -107,16 +117,24 @@ public class HOME_PAGE {
     }
 
     //
-    public static void waitIntro(String text){
-         verticalCenter(6);
-         horizontalText(text, 32);
-         pauseTime(1000);
+    public static void waitIntro(String text, int x, int y, int time){
+         verticalCenter(y);
+         horizontalText(text, x);
+         pauseTime(time);
     }
 
-    public static boolean ifContinue(){
-        Scanner scanner = new Scanner(System.in);
+    public static boolean ifContinue(Scanner scanner){
         System.out.print("Do you want to continue? (y/n): ");
-        String input = scanner.nextLine().trim().toLowerCase();
-        return input.equals("y");
+        String input = " ";
+        while(input != "y" || input != "n"){
+            input = scanner.nextLine().trim().toLowerCase();
+            if(input.equals("y")){
+                return true;
+            }
+            if(input.equals("n")){
+                return false;
+            }
+        }
+        return false;
     }
 }
