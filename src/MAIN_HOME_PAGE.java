@@ -4,11 +4,11 @@
 import java.util.Scanner;
 
 
-public class HOME_PAGE {
+public class MAIN_HOME_PAGE {
     public static void main(String[] args) {
 
         System.out.println("");
-        horizontalText("Welcome to the Spelling Bee Game!", 27);
+        format.horizontalText("Welcome to the Spelling Bee Game!", 27);
 
         // Main loop to display the home page and handle user input
         while (true) {
@@ -39,10 +39,10 @@ public class HOME_PAGE {
                             "       |                         [ EXIT GAME ]                              |\n" +
                             "       +====================================================================+");
 
-            horizontalText("Please select an option:", 7);
-            horizontalText("1. Start Game", 7);
-            horizontalText("2. Test Mode", 7);
-            horizontalText("3. Exit", 7);
+            format.horizontalText("Please select an option:", 7);
+            format.horizontalText("1. Start Game", 7);
+            format.horizontalText("2. Test Mode", 7);
+            format.horizontalText("3. Exit", 7);
             
             // scanner user choice input
             // Strictly enforce user input to be between 1 and 3
@@ -54,73 +54,36 @@ public class HOME_PAGE {
                 try {
                     choice = Integer.parseInt(scanner.nextLine());
                 } catch (NumberFormatException e) {
-                    horizontalText("Invalid input. Please enter a number between 1 and 3.", 7);
+                    format.horizontalText("Invalid input. Please enter a number between 1 and 3.", 7);
                 }
             }
 
             // switch case to handle user choice
-            clearConsole();
+            format.clearConsole();
             switch (choice) {
                 case 1:
-
-                    waitIntro("Starting the game...", 32, 6, 825);
+                    format.waitIntro("Starting the game...", 32, 6, 825);
+                    format.clearConsole();
                     do{
-                        clearConsole();
                         SpellingBeeGame.startGame(scanner);
-                        clearConsole();
+                        format.clearConsole();
                     }while(ifContinue(scanner));
-
-                    clearConsole();
-                    waitIntro("Exiting the game. Goodbye!", 32, 6, 825);
-                    clearConsole();
-
+                
+                    format.waitIntro("Exiting the game. Goodbye!", 32, 6, 825);
                     break;
                 case 2:
-                    waitIntro("Entering test mode...", 32, 6, 825);
+                    format.waitIntro("Entering test mode...", 32, 6, 825);
                     break;
                 case 3:
-                    waitIntro("Exiting the game. Goodbye!", 32, 6, 825);
+                    format.waitIntro("Exiting the game. Goodbye!", 32, 6, 825);
                     scanner.close();
                     System.exit(0);
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
-            clearConsole();
+            format.clearConsole();
         }
-    }
-
-    
-    // Method to clear the console screen
-    public static void clearConsole() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
-
-    // Method to pause the program for a specified number of milliseconds
-    public static void pauseTime(int milliseconds) {
-        try {
-            Thread.sleep(milliseconds);
-        } catch (InterruptedException e) {
-            System.out.println("Waiting interrupted");
-        }
-    }
-
-    // Method to control horizontal spacing by padding
-    public static void horizontalText(String text, int padding) {
-        System.out.println(" ".repeat(padding) + text);
-    }
-
-    // Method to control vertical spacing by padding
-    public static void verticalCenter(int padding) {
-        System.out.println("\n".repeat(padding));
-    }
-
-    //
-    public static void waitIntro(String text, int x, int y, int time){
-         verticalCenter(y);
-         horizontalText(text, x);
-         pauseTime(time);
     }
 
     public static boolean ifContinue(Scanner scanner){
