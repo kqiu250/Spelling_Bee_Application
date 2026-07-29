@@ -16,15 +16,16 @@ public class SpellingBeeGame {
         // Calculate level that fit with player current skill
         // Random rand = new Random();
         // int currWordKnown = CurreantWordCount_Storage.getWordLength();
-        // calculateDifficultyLevel(currWordKnown, rand);
+        // int wordLength = calculateDifficultyLevel(currWordKnown, rand);
 
         // randomly select a word from the dictionary by player level
-        // word word new word(Dictionary_Storage.getRandomWord(level));
-
+        int wordLength = 3;
+        Dictionary_Storage.setRandomWord(wordLength);
+        word word = new word(Dictionary_Storage.getWord(), Dictionary_Storage.getDefinition());
+    
         // word.getSround();
         // System.out.println("Definition: " + word.getDefinition());
         
-        word word = new word("counter"); // test word
 
         System.out.println("YOUR WORD IS: __________\n");
         System.out.println("Definition: " + word.getDefinition() + "\n\n\n");

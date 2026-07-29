@@ -3,9 +3,9 @@ public class word {
     String definition;
     int hint;
 
-    public word(String word){
+    public word(String word, String definition){
         this.word = word;
-        this.definition = "word is counter"; // Dictionary_Storage.getDefinition(word);
+        this.definition = definition; // Dictionary_Storage.getDefinition(word);
         this.hint = 0;
 
     }

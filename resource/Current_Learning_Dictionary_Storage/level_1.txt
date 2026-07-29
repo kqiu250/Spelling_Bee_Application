@@ -1,0 +1,28 @@
+Word_list: 9
+
+word: book
+definition: A set of written or printed pages bound together.
+
+word: jump
+definition: To push yourself off the ground using your legs.
+
+word: tree
+definition: A tall plant with a trunk, branches, and leaves.
+
+word: bird
+definition: A warm-blooded animal with feathers and wings.
+
+word: fish
+definition: An animal that lives in water and breathes through gills.
+
+word: moon
+definition: The natural satellite that orbits the Earth.
+
+word: rain
+definition: Water that falls from clouds.
+
+word: star
+definition: A massive ball of hot gas that produces light and heat.
+
+word: milk
+definition: A white liquid produced by mammals and commonly used as food.
