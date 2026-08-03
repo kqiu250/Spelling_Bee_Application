@@ -33,15 +33,6 @@ It helps users build their vocabulary through:
 
 # Problems
 
-<<<<<<< HEAD
-- Struggled to spell a word?
-- Struggled to describe something accurately?
-- Struggled to understand the meaning of a word?
-- Struggled to prompt LLM accurately?
-=======
-Common challenges:
->>>>>>> ba6f286966733b1c6a19ed84ea407d31013d8e9b
-
 - 🔤 Difficulty spelling unfamiliar words
 - 📝 Difficulty describing ideas accurately
 - 📖 Difficulty understanding word meanings
