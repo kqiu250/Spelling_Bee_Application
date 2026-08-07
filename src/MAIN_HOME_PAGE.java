@@ -109,9 +109,8 @@ public class MAIN_HOME_PAGE {
     }
 
     public static boolean ifContinue(Scanner scanner){
-        System.out.print("Do you want to continue? (y/n): ");
-        String input = " ";
-        while(input != "y" || input != "n"){
+        String input = "";
+        while(input != "y" && input != "n"){
             input = scanner.nextLine().trim().toLowerCase();
             if(input.equals("y")){
                 return true;
@@ -119,6 +118,7 @@ public class MAIN_HOME_PAGE {
             if(input.equals("n")){
                 return false;
             }
+            System.out.print("Do you want to continue? (y/n): ");
         }
         return false;
     }

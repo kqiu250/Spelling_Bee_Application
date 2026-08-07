@@ -18,8 +18,10 @@ public class SpellingBeeGame {
         // Calculate a random length that fit the player current level skill
         // TODO: int wordLength = calculateDifficultyLevel(CurreantWordCount_Storage.getWordLength(), rand);
         int wordLength = 3;
-        Dictionary_Storage.setRandomWord(wordLength); // randomly select a word from the dictionary that matches the wordLength
-        word word = new word(Dictionary_Storage.getWord(), Dictionary_Storage.getDefinition());
+        // get the right dictionary file based on the word length
+        Dictionary_Storage dictionaryLevel = new Dictionary_Storage(wordLength);
+        dictionaryLevel.setRandomWord();
+        wordControl word = new wordControl(dictionaryLevel.getWord(), dictionaryLevel.getDefinition());
     
         // word.getSround();
         // System.out.println("Definition: " + word.getDefinition());
@@ -30,7 +32,7 @@ public class SpellingBeeGame {
 
         while (true) {
             System.out.print("Please enter your guess: ");
-            String userGuess = ((String) scanner.next()).toLowerCase(); 
+            String userGuess = scanner.next().toLowerCase(); 
             if (word.isCorrectWord(userGuess)) {
                 System.out.println("Correct! Well done.");
                 format.pauseTime(1500);

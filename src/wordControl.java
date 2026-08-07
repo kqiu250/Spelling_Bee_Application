@@ -1,11 +1,11 @@
-public class word{
+public class wordControl{
     String word;
     String definition;
     int hint;
 
-    public word(String word, String definition){
+    public wordControl(String word, String definition){
         this.word = word;
-        this.definition = definition; // Dictionary_Storage.getDefinition(word);
+        this.definition = definition; 
         this.hint = 0;
 
     }
@@ -41,7 +41,5 @@ public class word{
         }
 
         return false;
-    }
-
-    
+    } 
 }

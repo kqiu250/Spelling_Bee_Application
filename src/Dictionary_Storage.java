@@ -4,61 +4,62 @@ import java.util. *;
 
 public class Dictionary_Storage{
 
-    public static Scanner scanner;
-    public static String word;
-    public static String definition;
+    private File dictionaryLevel;
+    private int size;
+    private String word;
+    private String definition;
 
-    public static void setRandomWord(int wordLength){
-        // based on the word length point to the file that contains the words that on the same level
-        String file = "resource/Current_Learning_Dictionary_Storage/level_" 
-        + calculateLevel(wordLength) + ".txt";
+    // constructor to initialize the dictionary storage with a specific word length file
+    public Dictionary_Storage(int wordLength){
+        this.dictionaryLevel = getDictionaryLevel(wordLength);
+        this.size = getSize();
+        this.word = null;
+        this.definition = null;
+    }
 
-        try{
-            File dictionary = new File(file);
-
-            scanner = new Scanner(dictionary);
+    public void setRandomWord(){
+        try {
+            Scanner scanner = new Scanner(dictionaryLevel);
             Random random = new Random();
 
-            // get the total number of words in the dictionary on first line and
             // generate a random number to select a word from the dictionary
-            int randomSpace = random.nextInt(getDictionaryWordLength()) + 1;
+            int randomSpace = random.nextInt(getSize()) + 1;
 
-            // skip the first line and reach the space above the word that is randomly selected
             int i = 0;
             while(scanner.hasNextLine() && i < randomSpace){
                 String line = scanner.nextLine();
 
                 if(line.isBlank()){
-                    i++;
+                        i++;
                 }
             }
-            
+                
             // get the word and definition from the dictionary
             String wordLine = scanner.nextLine();
-            word = wordLine.substring(6, wordLine.length());
+            this.word = wordLine.substring(6, wordLine.length());
             String definitionLine = scanner.nextLine();
-            definition = definitionLine.substring(10, definitionLine.length());
+            this.definition = definitionLine.substring(12, definitionLine.length());
 
             scanner.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
-        catch (FileNotFoundException e) {
-        e.printStackTrace();
-        }
-
     }
 
-    private static void removeWord(String word){    
+    private void removeWord(String word){    
         // NOTE: remove the word from the dictionary to avoid repetition
 
         // TODO: learn PrintWriter and finish this method to remove the word from the dictionary file
 
         // based on the word length point to the file that contains the words that on the same level
-        String file = "resource/Current_Learning_Dictionary_Storage/level_" 
+        String file = "resource/Current_Dictionary_Storage/level_" 
           + calculateLevel(word.length()) + ".txt";
 
         try {
             File dictionary = new File(file);
+            Scanner scanner = new Scanner(dictionary);
             // find the index(space) of the word to remove from the dictionary
+            // and -1 form the first line numOfWords in the file 
             scanner.close();
 
             PrintWriter writer = new PrintWriter(dictionary);
@@ -71,20 +72,66 @@ public class Dictionary_Storage{
     }
 
 
-    public static String getWord(){
+    public String getWord(){
+        if(word == null){
+            return "No word found";
+        }
+
         return word;
     }
 
-    public static String getDefinition(){
+    public String getDefinition(){
+        if(definition == null){
+            return "No definition found";
+        }
+
         return definition;
     }
 
-    private static int getDictionaryWordLength(){
-        String firstLine = scanner.nextLine();
-        return Integer.parseInt(firstLine.substring(11 , firstLine.length()));
+    public int getSize(){
+        if(size != 0){
+            return size;
+        }
+        SetSize();
+        return size;
     }
 
-    private static String calculateLevel(int wordLength){
+    public File getDictionaryLevel(int wordLength){
+        if(this.dictionaryLevel != null){
+            return this.dictionaryLevel;
+        }
+        SetDictionaryLevel(wordLength);
+        return this.dictionaryLevel;
+    }
+
+    private void SetSize(){
+
+        try {
+            Scanner scanner = new Scanner(dictionaryLevel);
+            String firstLine = scanner.nextLine();
+            scanner.close();
+            this.size = Integer.parseInt(firstLine.substring(11 , firstLine.length()));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void SetDictionaryLevel(int wordLength){
+        // based on the word length point to the file that contains the words that on the same level
+        String file = "resource/Current_Dictionary_Storage/level_" 
+        + calculateLevel(wordLength) + ".txt";
+
+        try{
+            this.dictionaryLevel = new File(file);
+            Scanner scanner = new Scanner(dictionaryLevel);
+            scanner.close();
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private String calculateLevel(int wordLength){
 
         // [3-4 Letter]
         if(wordLength >= 3 && wordLength <= 4) return "1";
@@ -103,7 +150,5 @@ public class Dictionary_Storage{
         
         return "7";
     }
-
-
 
 }
