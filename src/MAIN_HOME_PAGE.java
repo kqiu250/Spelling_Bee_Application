@@ -3,6 +3,28 @@
 
 import java.util.Scanner;
 
+// TODO:
+// user file[the wordCount] change all file in Currenrt_learning_Dictionary_Storage delete the word that user know
+// dictionary that needed to be change [use the format of user-file to see which file need to be change]
+// in every file in dictionary that changing: hashmap <String, Interger>, --> (word, index)
+//                                            the index is for the List<String> lines = new ArrayList<>();
+//                                            after that look at the user file to but in the key in the hashmap 
+//                                            and get the index to remove the word from the list    
+//                                            then rewrite over the dictionary file with the new list of lines
+
+
+// after the program ends, reset the dictionary to the original state 
+
+
+// TODO:
+// make a test mode that will test the user on the words they have learned
+
+// TODO:
+// make a Add [word + definition] to the dictionary feature 
+// maybe make the added word not global to other users 
+// maybe can add a push to the global dictionary feature if the word is not in the dictionary yet
+
+
 
 public class MAIN_HOME_PAGE {
     public static void main(String[] args) {
@@ -44,7 +66,6 @@ public class MAIN_HOME_PAGE {
             format.horizontalText("2. Test Mode", 7);
             format.horizontalText("3. Exit", 7);
             
-            // scanner user choice input
             // Strictly enforce user input to be between 1 and 3
             Scanner scanner = new Scanner(System.in);
             int choice = 0;
@@ -65,6 +86,7 @@ public class MAIN_HOME_PAGE {
                     format.waitIntro("Starting the game...", 32, 6, 825);
                     format.clearConsole();
                     do{
+                        format.clearConsole();
                         SpellingBeeGame.startGame(scanner);
                         format.clearConsole();
                     }while(ifContinue(scanner));

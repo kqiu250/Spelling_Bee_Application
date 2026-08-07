@@ -1,4 +1,4 @@
-public class word {
+public class word{
     String word;
     String definition;
     int hint;

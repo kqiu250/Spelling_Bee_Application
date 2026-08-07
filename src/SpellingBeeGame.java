@@ -13,14 +13,12 @@ public class SpellingBeeGame {
 
     public static void startGame(Scanner scanner) {
 
-        // Calculate level that fit with player current skill
-        // Random rand = new Random();
-        // int currWordKnown = CurreantWordCount_Storage.getWordLength();
-        // int wordLength = calculateDifficultyLevel(currWordKnown, rand);
+        // TODO: Random rand = new Random(); 
 
-        // randomly select a word from the dictionary by player level
+        // Calculate a random length that fit the player current level skill
+        // TODO: int wordLength = calculateDifficultyLevel(CurreantWordCount_Storage.getWordLength(), rand);
         int wordLength = 3;
-        Dictionary_Storage.setRandomWord(wordLength);
+        Dictionary_Storage.setRandomWord(wordLength); // randomly select a word from the dictionary that matches the wordLength
         word word = new word(Dictionary_Storage.getWord(), Dictionary_Storage.getDefinition());
     
         // word.getSround();
@@ -35,16 +33,17 @@ public class SpellingBeeGame {
             String userGuess = ((String) scanner.next()).toLowerCase(); 
             if (word.isCorrectWord(userGuess)) {
                 System.out.println("Correct! Well done.");
+                format.pauseTime(1500);
                 break; // exit loop
             }
             System.out.println("Incorrect, try again.");
         }
 
         // add to current word to known work
-        // CurreantWordCount_Storage.addWord(word);
+        // TODO: CurreantWordCount_Storage.addWord(word);
 
         // remove the word from the dictionary to avoid repetition
-        // Dictionary_Storage.removeWord(word);
+        // TODO:Dictionary_Storage.removeWord(word);
 
     }
 
